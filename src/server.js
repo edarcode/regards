@@ -3,7 +3,7 @@ import express from "express";
 import morgan from "morgan";
 import { router } from "./routes/main.router.js";
 
-const server = express();
+export const server = express();
 
 server.use(cors());
 server.use(express.urlencoded({ extended: true, limit: "50mb" }));
@@ -31,5 +31,3 @@ server.use((err, req, res, next) => {
 	console.error(err);
 	res.status(status).send(message);
 });
-
-export default server;

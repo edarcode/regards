@@ -1,7 +1,7 @@
 import { DataTypes } from "sequelize";
 
-export const defineUser = sequelize => {
-	sequelize.define(
+export const defineUser = connDb => {
+	connDb.define(
 		"User",
 		{
 			email: {
